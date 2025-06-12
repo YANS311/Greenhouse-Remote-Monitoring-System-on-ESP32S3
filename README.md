@@ -26,11 +26,6 @@ This repository contains the open-source code for a greenhouse environment remot
 - Bemfa Cloud account for remote monitoring
 
 
-## Setup Instructions
-1. **Hardware Setup**: Connect sensors, OLED displays, keyboard, buzzer, and LEDs to the ESP32S3 as described in `docs/hardware_setup.md`.
-2. **Software Setup**: Install MicroPython on the ESP32S3 and configure Thonny IDE (see `docs/software_setup.md`).
-3. **Configuration**: Update `src/config.py` with your Wi-Fi credentials, Bemfa Cloud API keys, and threshold limits.
-4. **Run the Code**: Upload the contents of `src/` to the ESP32S3 using Thonny and run `main.py`.
 
 ## Usage
 - Power on the ESP32S3 to start monitoring.
