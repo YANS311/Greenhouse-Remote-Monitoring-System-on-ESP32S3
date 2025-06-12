@@ -1,0 +1,104 @@
+{
+  "version": 1,
+  "author": "L203",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-s3-devkitc-1",
+      "id": "esp",
+      "top": -0.18,
+      "left": 4.57,
+      "attrs": { "env": "micropython-20231227-v1.22.0", "flashSize": "8" }
+    },
+    {
+      "type": "board-ssd1306",
+      "id": "oled1",
+      "top": 166.34,
+      "left": -210.97,
+      "attrs": { "i2cAddress": "0x3c" }
+    },
+    {
+      "type": "board-ssd1306",
+      "id": "oled2",
+      "top": -16.06,
+      "left": 134.63,
+      "attrs": { "i2cAddress": "0x3d" }
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht2",
+      "top": -66.9,
+      "left": -274.2,
+      "attrs": { "humidity": "35.5", "temperature": "21.9" }
+    },
+    { "type": "wokwi-buzzer", "id": "buzzer", "top": 69.6, "left": 136.2, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": -70.8, "left": -169, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": -70.8,
+      "left": -82.6,
+      "attrs": { "color": "limegreen" }
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "light1",
+      "top": 291.2,
+      "left": -200.8,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": -51.6,
+      "left": -121,
+      "attrs": { "color": "yellow" }
+    },
+    { "type": "wokwi-membrane-keypad", "id": "keypad1", "top": -482, "left": 178.4, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht1", "top": 67.5, "left": -418.2, "attrs": {} },
+    { "type": "wokwi-photoresistor-sensor", "id": "ldr1", "top": 224, "left": -556, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "buzzer:1", "esp:GND.3", "black", [ "v0" ] ],
+    [ "oled1:VCC", "esp:3V3.2", "red", [ "v0" ] ],
+    [ "esp:GND.1", "oled1:GND", "black", [ "h0" ] ],
+    [ "oled1:SCL", "esp:9", "green", [ "v0" ] ],
+    [ "esp:10", "oled1:SDA", "green", [ "h0" ] ],
+    [ "oled2:VCC", "esp:3V3.1", "red", [ "v0", "h-201.45" ] ],
+    [ "oled2:GND", "esp:GND.4", "black", [ "v240", "h-76.8" ] ],
+    [ "oled2:SCL", "esp:1", "green", [ "v0" ] ],
+    [ "oled2:SDA", "esp:2", "green", [ "v0" ] ],
+    [ "dht2:SDA", "esp:12", "green", [ "v0" ] ],
+    [ "dht1:SDA", "esp:11", "green", [ "v0" ] ],
+    [ "dht2:VCC", "esp:3V3.1", "red", [ "v0" ] ],
+    [ "dht1:VCC", "esp:3V3.2", "red", [ "v0" ] ],
+    [ "dht1:GND", "esp:GND.1", "black", [ "v0" ] ],
+    [ "dht2:GND", "esp:GND.1", "black", [ "v0" ] ],
+    [ "led1:A", "esp:4", "orange", [ "v0" ] ],
+    [ "led1:C", "esp:GND.1", "black", [ "v0" ] ],
+    [ "led2:C", "esp:GND.1", "black", [ "v0" ] ],
+    [ "led3:C", "esp:GND.4", "black", [ "v0" ] ],
+    [ "esp:GND.1", "light1:GND", "black", [ "h-14.68", "v76.62" ] ],
+    [ "esp:13", "buzzer:2", "green", [ "h0" ] ],
+    [ "light1:VCC", "esp:3V3.2", "red", [ "h19.2", "v-268.8" ] ],
+    [ "light1:DO", "esp:7", "green", [ "h9.6", "v-240.6" ] ],
+    [ "esp:8", "light1:AO", "cyan", [ "h-28.85", "v201.6", "h-9.6" ] ],
+    [ "ldr1:VCC", "esp:3V3.1", "red", [ "h326.4", "v-211.2" ] ],
+    [ "ldr1:GND", "esp:GND.1", "black", [ "h0" ] ],
+    [ "ldr1:DO", "esp:15", "green", [ "h355.2", "v-163.8" ] ],
+    [ "esp:18", "ldr1:AO", "green", [ "h-355.25", "v144" ] ],
+    [ "keypad1:R1", "esp:38", "#8f4814", [ "v259.2", "h-182.4" ] ],
+    [ "keypad1:R2", "esp:37", "green", [ "v0" ] ],
+    [ "keypad1:R3", "esp:36", "orange", [ "v0" ] ],
+    [ "keypad1:R4", "esp:35", "green", [ "v0" ] ],
+    [ "keypad1:C1", "esp:39", "gold", [ "v0" ] ],
+    [ "keypad1:C2", "esp:40", "green", [ "v0" ] ],
+    [ "keypad1:C3", "esp:41", "blue", [ "v0" ] ],
+    [ "keypad1:C4", "esp:42", "violet", [ "v0" ] ],
+    [ "esp:6", "led2:A", "green", [ "h0" ] ],
+    [ "led3:A", "esp:5", "yellow", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
