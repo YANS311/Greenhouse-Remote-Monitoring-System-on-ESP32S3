@@ -39,17 +39,9 @@ This repository contains the open-source code for a greenhouse environment remot
 - Access remote data and control devices via the Bemfa Cloud mobile app.
 - Alarms trigger automatically when parameters exceed set limits.
 
-## Documentation
-- [System Design](docs/system_design.md)
-- [Hardware Setup](docs/hardware_setup.md)
-- [Software Setup](docs/software_setup.md)
-- [Bemfa Cloud Integration](docs/api_bemfa.md)
-- [Schematic Diagram](docs/schematic_diagram.svg)
+
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Acknowledgments
-- Thesis advisor: Shen Qing-hua
-- Developed by: Liu Zhuang-zhuang
-- Built with MicroPython and Thonny IDE
+
