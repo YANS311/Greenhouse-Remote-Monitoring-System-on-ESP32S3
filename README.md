@@ -36,7 +36,6 @@ This repository contains the open-source code for a greenhouse environment remot
 
 
 
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 
 
