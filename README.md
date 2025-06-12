@@ -24,7 +24,7 @@ This repository contains the open-source code for a greenhouse environment remot
 - MicroPython firmware for ESP32S3
 - Thonny IDE for development
 - Bemfa Cloud account for remote monitoring
-- Python libraries (listed in `requirements.txt`)
+
 
 ## Setup Instructions
 1. **Hardware Setup**: Connect sensors, OLED displays, keyboard, buzzer, and LEDs to the ESP32S3 as described in `docs/hardware_setup.md`.
